@@ -1,16 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WindowsFormsApp2 {
     class FileHandler {
         private Computer c = new Computer();
         private int diskIndex = 0;
         private String diskKey = "";
-
 
         public FileHandler(string[] lines, string fileName) {
             c.modification = File.GetLastWriteTime(fileName);
@@ -34,12 +29,19 @@ namespace WindowsFormsApp2 {
                     } else if (key == "Manufacturer") {
                         if (value == "Hewlett-Packard") {
                             c.manufacturer = "HP";
-                        } else {
+                        } else if (value == "Microsoft Corporation"){
+                            c.manufacturer = "Microsoft";
+                        }
+                        else {
                             c.manufacturer = value;
                         }
                     } else if (key == "Model") {
                         c.model = value;
                     } else if (key == "Operating System") {
+                        if (value.Contains("Microsoft")) {
+                            value = value.Replace("Microsoft ", "");
+                            c.os = value;
+                        }
                         c.os = value;
                     } else if (key == "Architecture") {
                         value = value.Replace(" bits", "");
@@ -48,7 +50,7 @@ namespace WindowsFormsApp2 {
                     } else if (key == "CPU") {
                         c.cpu = new CPU(value);
                     } else if (key == "RAM (GB)") {
-                        c.ram = value + " GB";
+                        c.ram = value;
                     } else if (key == "GPU") {
                         c.gpu = new GPU(value);
                     } else if (key == "Disk Name") {
@@ -70,6 +72,8 @@ namespace WindowsFormsApp2 {
                         c.disks[diskIndex].size = value;
                         diskKey = key;
                         diskIndex++;
+                    } else if (key == "Windows installation date") {
+                        c.osInstallDate = value;
                     }
                 }
             }

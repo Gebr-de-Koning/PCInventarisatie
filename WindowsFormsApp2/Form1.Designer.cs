@@ -35,9 +35,10 @@
             this.CPUscore = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.RAM = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.GPUname = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.GPUscore = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.computerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.GPUscore = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.osInstallDate = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             ((System.ComponentModel.ISupportInitialize)(this.fastObjectListView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -52,6 +53,7 @@
             this.fastObjectListView1.AllColumns.Add(this.Manufacturer);
             this.fastObjectListView1.AllColumns.Add(this.Model);
             this.fastObjectListView1.AllColumns.Add(this.OS);
+            this.fastObjectListView1.AllColumns.Add(this.osInstallDate);
             this.fastObjectListView1.AllColumns.Add(this.Architecture);
             this.fastObjectListView1.AllColumns.Add(this.CPUname);
             this.fastObjectListView1.AllColumns.Add(this.CPUscore);
@@ -65,6 +67,7 @@
             this.Manufacturer,
             this.Model,
             this.OS,
+            this.osInstallDate,
             this.Architecture,
             this.CPUname,
             this.CPUscore,
@@ -126,12 +129,17 @@
             // RAM
             // 
             this.RAM.AspectName = "ram";
-            this.RAM.Text = "RAM";
+            this.RAM.Text = "RAM (GB)";
             // 
             // GPUname
             // 
             this.GPUname.AspectName = "gpu.name";
             this.GPUname.Text = "GPU";
+            // 
+            // GPUscore
+            // 
+            this.GPUscore.AspectName = "gpu.score";
+            this.GPUscore.Text = "GPU score";
             // 
             // splitContainer1
             // 
@@ -155,10 +163,10 @@
             // 
             this.computerBindingSource.DataSource = typeof(WindowsFormsApp2.Computer);
             // 
-            // GPUscore
+            // osInstallDate
             // 
-            this.GPUscore.AspectName = "gpu.score";
-            this.GPUscore.Text = "GPU score";
+            this.osInstallDate.AspectName = "osInstallDate";
+            this.osInstallDate.Text = "OS Installation date";
             // 
             // Form1
             // 
@@ -193,6 +201,7 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private BrightIdeasSoftware.OLVColumn CPUscore;
         private BrightIdeasSoftware.OLVColumn GPUscore;
+        private BrightIdeasSoftware.OLVColumn osInstallDate;
     }
 }
 
