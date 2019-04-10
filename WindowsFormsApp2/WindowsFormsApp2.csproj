@@ -61,6 +61,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="GPU.cs" />
+    <Compile Include="LicenseManager.cs" />
     <Compile Include="OfficeLicense.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

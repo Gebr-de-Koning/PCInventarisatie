@@ -30,6 +30,7 @@
             this.Manufacturer = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.Model = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.OS = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.osInstallDate = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.Architecture = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.CPUname = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.CPUscore = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
@@ -37,8 +38,8 @@
             this.GPUname = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.GPUscore = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.osVersion = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.computerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.osInstallDate = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             ((System.ComponentModel.ISupportInitialize)(this.fastObjectListView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -53,6 +54,7 @@
             this.fastObjectListView1.AllColumns.Add(this.Manufacturer);
             this.fastObjectListView1.AllColumns.Add(this.Model);
             this.fastObjectListView1.AllColumns.Add(this.OS);
+            this.fastObjectListView1.AllColumns.Add(this.osVersion);
             this.fastObjectListView1.AllColumns.Add(this.osInstallDate);
             this.fastObjectListView1.AllColumns.Add(this.Architecture);
             this.fastObjectListView1.AllColumns.Add(this.CPUname);
@@ -67,6 +69,7 @@
             this.Manufacturer,
             this.Model,
             this.OS,
+            this.osVersion,
             this.osInstallDate,
             this.Architecture,
             this.CPUname,
@@ -110,6 +113,11 @@
             // 
             this.OS.AspectName = "os";
             this.OS.Text = "OS";
+            // 
+            // osInstallDate
+            // 
+            this.osInstallDate.AspectName = "osInstallDate";
+            this.osInstallDate.Text = "OS Installation date";
             // 
             // Architecture
             // 
@@ -159,14 +167,14 @@
             this.splitContainer1.SplitterDistance = 107;
             this.splitContainer1.TabIndex = 4;
             // 
+            // osVersion
+            // 
+            this.osVersion.AspectName = "osVersion";
+            this.osVersion.Text = "OS Version";
+            // 
             // computerBindingSource
             // 
             this.computerBindingSource.DataSource = typeof(WindowsFormsApp2.Computer);
-            // 
-            // osInstallDate
-            // 
-            this.osInstallDate.AspectName = "osInstallDate";
-            this.osInstallDate.Text = "OS Installation date";
             // 
             // Form1
             // 
@@ -202,6 +210,7 @@
         private BrightIdeasSoftware.OLVColumn CPUscore;
         private BrightIdeasSoftware.OLVColumn GPUscore;
         private BrightIdeasSoftware.OLVColumn osInstallDate;
+        private BrightIdeasSoftware.OLVColumn osVersion;
     }
 }
 

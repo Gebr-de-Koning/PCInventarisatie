@@ -5,7 +5,8 @@ namespace WindowsFormsApp2 {
     class FileHandler {
         private Computer c = new Computer();
         private int diskIndex = 0;
-        private String diskKey = "";
+        private int licenseIndex = 0;
+        private String subject = "";
 
         public FileHandler(string[] lines, string fileName) {
             c.modification = File.GetLastWriteTime(fileName);
@@ -29,7 +30,7 @@ namespace WindowsFormsApp2 {
                     } else if (key == "Manufacturer") {
                         if (value == "Hewlett-Packard") {
                             c.manufacturer = "HP";
-                        } else if (value == "Microsoft Corporation"){
+                        } else if (value == "Microsoft Corporation") {
                             c.manufacturer = "Microsoft";
                         }
                         else {
@@ -43,6 +44,12 @@ namespace WindowsFormsApp2 {
                             c.os = value;
                         }
                         c.os = value;
+                    } else if (key == "OS Version") {
+                        c.osVersion = value;
+                    } else if (key == "Windows installation date") {
+                        DateTime date = Convert.ToDateTime(value);
+                        value = date.ToString("yyyy-MM-dd");
+                        c.osInstallDate = value;
                     } else if (key == "Architecture") {
                         value = value.Replace(" bits", "");
                         value = value.Replace("-bit", "");
@@ -50,30 +57,35 @@ namespace WindowsFormsApp2 {
                     } else if (key == "CPU") {
                         c.cpu = new CPU(value);
                     } else if (key == "RAM (GB)") {
-                        c.ram = value;
+                        c.ram = Math.Round(Convert.ToDouble(value));
                     } else if (key == "GPU") {
                         c.gpu = new GPU(value);
                     } else if (key == "Disk Name") {
                         c.disks.Add(new Disk());
                         c.disks[diskIndex].name = value;
-                        diskKey = key;
+                        subject = key;
                         diskIndex++;
                     } else if (key == "Disk Media Type") {
-                        if (diskKey == "Disk Name") {
+                        if (subject == "Disk Name") {
                             diskIndex = 0;
                         }
                         c.disks[diskIndex].type = value;
-                        diskKey = key;
+                        subject = key;
                         diskIndex++;
                     } else if (key == "Disk Total Size (GB)") {
-                        if (diskKey == "Disk Media Type") {
+                        if (subject == "Disk Media Type") {
                             diskIndex = 0;
                         }
                         c.disks[diskIndex].size = value;
-                        diskKey = key;
+                        subject = key;
                         diskIndex++;
-                    } else if (key == "Windows installation date") {
-                        c.osInstallDate = value;
+                    } else if (key == "LICENSE NAME") {
+                        c.officeLicences.Add(new OfficeLicense());
+                        c.officeLicences[licenseIndex].name = value;
+                    } else if (key == "Last 5 characters of installed product key") {
+                        c.officeLicences[licenseIndex].key = value;
+                        LicenseManager.getFullLicense(c.officeLicences[licenseIndex]);
+                        licenseIndex++;
                     }
                 }
             }
