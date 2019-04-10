@@ -15,11 +15,23 @@ namespace WindowsFormsApp2 {
             }
             foreach(String line in lines) {
                 int keyLocation = line.IndexOf(":");
+                if (line.StartsWith("@{")) {
+                    subject = line;
+                    subject = subject.Replace("@{Program Name=", "");
+                    subject = subject.Replace("@{DisplayName=", "");
+                    subject = subject.Replace("Program Version=", "");
+                    subject = subject.Replace("DisplayVersion=", "");
+                    subject = subject.Replace("}", "");
+                    String[] values = subject.Split(new[] {";"}, StringSplitOptions.None);
+                    c.programs.Add(new InstalledProgram(values[0].TrimEnd(' '), values[1].TrimStart(' ')));
+                }
                 if (keyLocation > 0) {
                     String key = line.Substring(0, keyLocation);
                     String value = line.Substring(keyLocation+2);
                     if (key == "Date") {
-                        c.date = Convert.ToDateTime(value);
+                        DateTime date = Convert.ToDateTime(value);
+                        value = date.ToString("yyyy-MM-dd");
+                        c.date = value;
                     } else if (key == "User") {
                         c.user = value;
                     } else if (key == "Workstation") {
@@ -32,8 +44,7 @@ namespace WindowsFormsApp2 {
                             c.manufacturer = "HP";
                         } else if (value == "Microsoft Corporation") {
                             c.manufacturer = "Microsoft";
-                        }
-                        else {
+                        } else {
                             c.manufacturer = value;
                         }
                     } else if (key == "Model") {
@@ -44,6 +55,12 @@ namespace WindowsFormsApp2 {
                             c.os = value;
                         }
                         c.os = value;
+                    } else if (key == "Device type") {
+                        if (value != "2") {
+                            c.deviceType = "Desktop";
+                        } else {
+                            c.deviceType = "Laptop";
+                        }
                     } else if (key == "OS Version") {
                         c.osVersion = value;
                     } else if (key == "Windows installation date") {
@@ -59,7 +76,9 @@ namespace WindowsFormsApp2 {
                     } else if (key == "RAM (GB)") {
                         c.ram = Math.Round(Convert.ToDouble(value));
                     } else if (key == "GPU") {
-                        c.gpu = new GPU(value);
+                        if (!value.Contains("USB")) {
+                            c.gpu = new GPU(value);
+                        }
                     } else if (key == "Disk Name") {
                         c.disks.Add(new Disk());
                         c.disks[diskIndex].name = value;
@@ -79,6 +98,16 @@ namespace WindowsFormsApp2 {
                         c.disks[diskIndex].size = value;
                         subject = key;
                         diskIndex++;
+                    } else if (key == "Disk Health Status") {
+                        if (subject == "Disk Total Size (GB)") {
+                            diskIndex = 0;
+                        }
+                        c.disks[diskIndex].health = value;
+                        subject = key;
+                        diskIndex++;
+                    }
+                    else if (key == "Disk Total Free Space (GB)") {
+                        c.freeSpace = value;
                     } else if (key == "LICENSE NAME") {
                         c.officeLicences.Add(new OfficeLicense());
                         c.officeLicences[licenseIndex].name = value;
@@ -86,6 +115,8 @@ namespace WindowsFormsApp2 {
                         c.officeLicences[licenseIndex].key = value;
                         LicenseManager.getFullLicense(c.officeLicences[licenseIndex]);
                         licenseIndex++;
+                    } else if (key == "Symantec Version" || key == "Symantec") {
+                        c.symantecVersion = value;
                     }
                 }
             }

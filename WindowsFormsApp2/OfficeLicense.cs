@@ -6,10 +6,5 @@ namespace WindowsFormsApp2{
         public String key { get; set; }
         public String number { get; set; }
         public String email { get; set; }
-
-        public OfficeLicense(){
-
-        }
-
     }
 }

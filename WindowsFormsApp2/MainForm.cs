@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp2 {
-    public partial class Form1 : Form {
+    public partial class PCInventarisation : Form {
         private List<Computer> computers = new List<Computer>();
 
-        public Form1() {
+        public PCInventarisation() {
             InitializeComponent();
         }
 

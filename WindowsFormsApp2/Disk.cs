@@ -8,6 +8,7 @@ namespace WindowsFormsApp2 {
     class Disk {
         public String name { get; set; }
         public String type { get; set; }
+        public String health { get; set; }
         public String size { get; set; }
     }
 }
