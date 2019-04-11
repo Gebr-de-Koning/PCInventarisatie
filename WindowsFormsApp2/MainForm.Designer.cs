@@ -26,6 +26,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PCInventarisation));
             this.fastObjectListView1 = new BrightIdeasSoftware.FastObjectListView();
+            this.date = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.Workstation = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.User = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.Manufacturer = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
@@ -40,9 +41,8 @@
             this.RAM = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.GPUname = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.GPUscore = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.symantecVersion = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.date = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.computerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.fastObjectListView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -98,6 +98,12 @@
             this.fastObjectListView1.UseCompatibleStateImageBehavior = false;
             this.fastObjectListView1.View = System.Windows.Forms.View.Details;
             this.fastObjectListView1.VirtualMode = true;
+            this.fastObjectListView1.DoubleClick += new System.EventHandler(this.Form1_ItemActivate);
+            // 
+            // date
+            // 
+            this.date.AspectName = "date";
+            this.date.Text = "Date";
             // 
             // Workstation
             // 
@@ -137,7 +143,7 @@
             // osInstallDate
             // 
             this.osInstallDate.AspectName = "osInstallDate";
-            this.osInstallDate.Text = "OS Installation date";
+            this.osInstallDate.Text = "OS Install date";
             // 
             // Architecture
             // 
@@ -169,6 +175,11 @@
             this.GPUscore.AspectName = "gpu.score";
             this.GPUscore.Text = "GPU score";
             // 
+            // symantecVersion
+            // 
+            this.symantecVersion.AspectName = "symantecVersion";
+            this.symantecVersion.Text = "Symantec Version";
+            // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -186,16 +197,6 @@
             this.splitContainer1.Size = new System.Drawing.Size(800, 450);
             this.splitContainer1.SplitterDistance = 107;
             this.splitContainer1.TabIndex = 4;
-            // 
-            // symantecVersion
-            // 
-            this.symantecVersion.AspectName = "symantecVersion";
-            this.symantecVersion.Text = "Symantec Version";
-            // 
-            // date
-            // 
-            this.date.AspectName = "date";
-            this.date.Text = "Date";
             // 
             // computerBindingSource
             // 
