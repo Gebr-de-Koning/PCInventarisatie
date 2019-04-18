@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsFormsApp2
-{
-    class InstalledProgram{
+namespace WindowsFormsApp2{
+    public class InstalledProgram{
         public String name { get; set; }
         public String version { get; set; }
 

@@ -7,9 +7,9 @@ using System.Windows.Forms;
 namespace WindowsFormsApp2 {
     public partial class PCInventarisation : Form {
         private List<Computer> computers = new List<Computer>();
-        public event EventHandler ItemActivate;
 
-        public PCInventarisation() {
+        public PCInventarisation()
+        {
             InitializeComponent();
         }
 
@@ -29,16 +29,16 @@ namespace WindowsFormsApp2 {
                 }
 
                 if (files.Length != computers.Count) {
-                    MessageBox.Show("Error");
+                    MessageBox.Show("Fout bij het inlezen van de computers");
                 }
                 fastObjectListView1.AddObjects(com);
             } catch (DirectoryNotFoundException){
                 MessageBox.Show("Geen computers gevonden");
             }
 
-            foreach (ColumnHeader header in fastObjectListView1.Columns) {
-                header.Width = -2;
-            }
+            //foreach (ColumnHeader header in fastObjectListView1.Columns) {
+            //    header.Width = -2;
+            //}
         }
 
         private void processFile(String fileName) {
@@ -60,7 +60,7 @@ namespace WindowsFormsApp2 {
         private void Form1_ItemActivate(Object sender, EventArgs e) {
             Computer selectedPC = (Computer) fastObjectListView1.SelectedObject;
             Console.WriteLine(selectedPC.workstation);
-            PCForm detailView = new PCForm();
+            PCForm detailView = new PCForm(selectedPC);
             detailView.Show();
         }
     }

@@ -93,7 +93,7 @@
             this.fastObjectListView1.Location = new System.Drawing.Point(0, 0);
             this.fastObjectListView1.Name = "fastObjectListView1";
             this.fastObjectListView1.ShowGroups = false;
-            this.fastObjectListView1.Size = new System.Drawing.Size(800, 339);
+            this.fastObjectListView1.Size = new System.Drawing.Size(1438, 339);
             this.fastObjectListView1.TabIndex = 3;
             this.fastObjectListView1.UseCompatibleStateImageBehavior = false;
             this.fastObjectListView1.View = System.Windows.Forms.View.Details;
@@ -104,61 +104,73 @@
             // 
             this.date.AspectName = "date";
             this.date.Text = "Date";
+            this.date.Width = 70;
             // 
             // Workstation
             // 
             this.Workstation.AspectName = "workstation";
             this.Workstation.Text = "Workstation";
+            this.Workstation.Width = 90;
             // 
             // User
             // 
             this.User.AspectName = "user";
             this.User.Text = "User";
+            this.User.Width = 75;
             // 
             // Manufacturer
             // 
             this.Manufacturer.AspectName = "manufacturer";
             this.Manufacturer.Text = "Manufacturer";
+            this.Manufacturer.Width = 110;
             // 
             // Model
             // 
             this.Model.AspectName = "model";
             this.Model.Text = "Model";
+            this.Model.Width = 150;
             // 
             // deviceType
             // 
             this.deviceType.AspectName = "deviceType";
             this.deviceType.Text = "Device type";
+            this.deviceType.Width = 70;
             // 
             // OS
             // 
             this.OS.AspectName = "os";
             this.OS.Text = "OS";
+            this.OS.Width = 95;
             // 
             // osVersion
             // 
             this.osVersion.AspectName = "osVersion";
             this.osVersion.Text = "OS Version";
+            this.osVersion.Width = 65;
             // 
             // osInstallDate
             // 
             this.osInstallDate.AspectName = "osInstallDate";
             this.osInstallDate.Text = "OS Install date";
+            this.osInstallDate.Width = 85;
             // 
             // Architecture
             // 
             this.Architecture.AspectName = "architecture";
             this.Architecture.Text = "Architecture";
+            this.Architecture.Width = 70;
             // 
             // CPUname
             // 
             this.CPUname.AspectName = "cpu.name";
             this.CPUname.Text = "CPU";
+            this.CPUname.Width = 250;
             // 
             // CPUscore
             // 
             this.CPUscore.AspectName = "cpu.score";
             this.CPUscore.Text = "CPU score";
+            this.CPUscore.Width = 65;
             // 
             // RAM
             // 
@@ -169,16 +181,19 @@
             // 
             this.GPUname.AspectName = "gpu.name";
             this.GPUname.Text = "GPU";
+            this.GPUname.Width = 175;
             // 
             // GPUscore
             // 
             this.GPUscore.AspectName = "gpu.score";
             this.GPUscore.Text = "GPU score";
+            this.GPUscore.Width = 65;
             // 
             // symantecVersion
             // 
             this.symantecVersion.AspectName = "symantecVersion";
             this.symantecVersion.Text = "Symantec Version";
+            this.symantecVersion.Width = 130;
             // 
             // splitContainer1
             // 
@@ -194,7 +209,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.fastObjectListView1);
-            this.splitContainer1.Size = new System.Drawing.Size(800, 450);
+            this.splitContainer1.Size = new System.Drawing.Size(1438, 450);
             this.splitContainer1.SplitterDistance = 107;
             this.splitContainer1.TabIndex = 4;
             // 
@@ -206,7 +221,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1438, 450);
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PCInventarisation";

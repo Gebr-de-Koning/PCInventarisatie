@@ -107,7 +107,7 @@ namespace WindowsFormsApp2 {
                         diskIndex++;
                     }
                     else if (key == "Disk Total Free Space (GB)") {
-                        c.freeSpace = value;
+                        c.freeSpace = Math.Round(Convert.ToDouble(value));
                     } else if (key == "LICENSE NAME") {
                         c.officeLicences.Add(new OfficeLicense());
                         c.officeLicences[licenseIndex].name = value;

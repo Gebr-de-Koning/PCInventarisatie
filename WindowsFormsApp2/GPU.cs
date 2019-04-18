@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace WindowsFormsApp2{
-    class GPU{
+    public class GPU{
         public String name { get; set; }
         public int score { get; set; }
 

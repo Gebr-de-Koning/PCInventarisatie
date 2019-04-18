@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 namespace WindowsFormsApp2 {
-    class Computer {
+    public class Computer {
         public String date { get; set; }
         public String user { get; set; }
         public String workstation { get; set; }
@@ -14,7 +14,7 @@ namespace WindowsFormsApp2 {
         public String osInstallDate { get; set; }
         public String architecture { get; set; }
         public double ram { get; set; }
-        public String freeSpace { get; set; }
+        public double freeSpace { get; set; }
         public String symantecVersion { get; set; }
         public CPU cpu { get; set; }
         public GPU gpu { get; set; }
