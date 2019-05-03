@@ -90,6 +90,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Computer.datasource" />
@@ -108,6 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="computer_2_cy0_icon.ico" />
+    <None Include="Resources\GDKlogo_20160616_klein.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

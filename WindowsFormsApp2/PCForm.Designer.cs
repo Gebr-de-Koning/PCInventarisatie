@@ -55,41 +55,41 @@
             this.diskHealth = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.OfficeLicenseTab = new System.Windows.Forms.TabControl();
             this.HardwareSpecsTab = new System.Windows.Forms.TabPage();
-            this.OfficeProgramsTab = new System.Windows.Forms.TabPage();
-            this.InstalledProgramsTab = new System.Windows.Forms.TabPage();
-            this.textDate = new System.Windows.Forms.TextBox();
-            this.textUser = new System.Windows.Forms.TextBox();
-            this.textManufacturer = new System.Windows.Forms.TextBox();
-            this.textModel = new System.Windows.Forms.TextBox();
-            this.textDeviceType = new System.Windows.Forms.TextBox();
-            this.textOperatingSystem = new System.Windows.Forms.TextBox();
-            this.textOSVersion = new System.Windows.Forms.TextBox();
-            this.textWindowsInstallDate = new System.Windows.Forms.TextBox();
-            this.textArchitecture = new System.Windows.Forms.TextBox();
-            this.textCPU = new System.Windows.Forms.TextBox();
-            this.textCPUBench = new System.Windows.Forms.TextBox();
-            this.textGPU = new System.Windows.Forms.TextBox();
-            this.textGPUBench = new System.Windows.Forms.TextBox();
-            this.textRAM = new System.Windows.Forms.TextBox();
-            this.textFreeSpace = new System.Windows.Forms.TextBox();
             this.textSymVersion = new System.Windows.Forms.TextBox();
-            this.PCHeader2 = new System.Windows.Forms.Label();
+            this.textFreeSpace = new System.Windows.Forms.TextBox();
+            this.textRAM = new System.Windows.Forms.TextBox();
+            this.textGPUBench = new System.Windows.Forms.TextBox();
+            this.textGPU = new System.Windows.Forms.TextBox();
+            this.textCPUBench = new System.Windows.Forms.TextBox();
+            this.textCPU = new System.Windows.Forms.TextBox();
+            this.textArchitecture = new System.Windows.Forms.TextBox();
+            this.textWindowsInstallDate = new System.Windows.Forms.TextBox();
+            this.textOSVersion = new System.Windows.Forms.TextBox();
+            this.textOperatingSystem = new System.Windows.Forms.TextBox();
+            this.textDeviceType = new System.Windows.Forms.TextBox();
+            this.textModel = new System.Windows.Forms.TextBox();
+            this.textManufacturer = new System.Windows.Forms.TextBox();
+            this.textUser = new System.Windows.Forms.TextBox();
+            this.textDate = new System.Windows.Forms.TextBox();
+            this.OfficeProgramsTab = new System.Windows.Forms.TabPage();
             this.OfficeLicenseListView = new BrightIdeasSoftware.FastObjectListView();
             this.officeName = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.officeKey = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.officeNumber = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.OfficeEmail = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.PCHeader3 = new System.Windows.Forms.Label();
+            this.PCHeader2 = new System.Windows.Forms.Label();
+            this.InstalledProgramsTab = new System.Windows.Forms.TabPage();
             this.InstalledProgramsObjectListView = new BrightIdeasSoftware.FastObjectListView();
             this.ProgramName = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.ProgramVersion = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.PCHeader3 = new System.Windows.Forms.Label();
             this.computerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.DiskObjectListView)).BeginInit();
             this.OfficeLicenseTab.SuspendLayout();
             this.HardwareSpecsTab.SuspendLayout();
             this.OfficeProgramsTab.SuspendLayout();
-            this.InstalledProgramsTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OfficeLicenseListView)).BeginInit();
+            this.InstalledProgramsTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InstalledProgramsObjectListView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.computerBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -368,183 +368,16 @@
             this.HardwareSpecsTab.Text = "Hardware specifications";
             this.HardwareSpecsTab.UseVisualStyleBackColor = true;
             // 
-            // OfficeProgramsTab
+            // textSymVersion
             // 
-            this.OfficeProgramsTab.Controls.Add(this.OfficeLicenseListView);
-            this.OfficeProgramsTab.Controls.Add(this.PCHeader2);
-            this.OfficeProgramsTab.Location = new System.Drawing.Point(4, 22);
-            this.OfficeProgramsTab.Name = "OfficeProgramsTab";
-            this.OfficeProgramsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.OfficeProgramsTab.Size = new System.Drawing.Size(769, 467);
-            this.OfficeProgramsTab.TabIndex = 1;
-            this.OfficeProgramsTab.Text = "Office licenses";
-            this.OfficeProgramsTab.UseVisualStyleBackColor = true;
-            // 
-            // InstalledProgramsTab
-            // 
-            this.InstalledProgramsTab.Controls.Add(this.InstalledProgramsObjectListView);
-            this.InstalledProgramsTab.Controls.Add(this.PCHeader3);
-            this.InstalledProgramsTab.Location = new System.Drawing.Point(4, 22);
-            this.InstalledProgramsTab.Name = "InstalledProgramsTab";
-            this.InstalledProgramsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.InstalledProgramsTab.Size = new System.Drawing.Size(769, 467);
-            this.InstalledProgramsTab.TabIndex = 2;
-            this.InstalledProgramsTab.Text = "Installed Programs";
-            this.InstalledProgramsTab.UseVisualStyleBackColor = true;
-            // 
-            // textDate
-            // 
-            this.textDate.BackColor = System.Drawing.Color.White;
-            this.textDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textDate.Location = new System.Drawing.Point(171, 46);
-            this.textDate.Name = "textDate";
-            this.textDate.ReadOnly = true;
-            this.textDate.Size = new System.Drawing.Size(190, 13);
-            this.textDate.TabIndex = 35;
-            this.textDate.Text = "##########";
-            // 
-            // textUser
-            // 
-            this.textUser.BackColor = System.Drawing.Color.White;
-            this.textUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textUser.Location = new System.Drawing.Point(171, 68);
-            this.textUser.Name = "textUser";
-            this.textUser.ReadOnly = true;
-            this.textUser.Size = new System.Drawing.Size(190, 13);
-            this.textUser.TabIndex = 36;
-            this.textUser.Text = "##########";
-            // 
-            // textManufacturer
-            // 
-            this.textManufacturer.BackColor = System.Drawing.Color.White;
-            this.textManufacturer.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textManufacturer.Location = new System.Drawing.Point(171, 90);
-            this.textManufacturer.Name = "textManufacturer";
-            this.textManufacturer.ReadOnly = true;
-            this.textManufacturer.Size = new System.Drawing.Size(190, 13);
-            this.textManufacturer.TabIndex = 37;
-            this.textManufacturer.Text = "##########";
-            // 
-            // textModel
-            // 
-            this.textModel.BackColor = System.Drawing.Color.White;
-            this.textModel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textModel.Location = new System.Drawing.Point(171, 112);
-            this.textModel.Name = "textModel";
-            this.textModel.ReadOnly = true;
-            this.textModel.Size = new System.Drawing.Size(190, 13);
-            this.textModel.TabIndex = 38;
-            this.textModel.Text = "##########";
-            // 
-            // textDeviceType
-            // 
-            this.textDeviceType.BackColor = System.Drawing.Color.White;
-            this.textDeviceType.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textDeviceType.Location = new System.Drawing.Point(171, 134);
-            this.textDeviceType.Name = "textDeviceType";
-            this.textDeviceType.ReadOnly = true;
-            this.textDeviceType.Size = new System.Drawing.Size(190, 13);
-            this.textDeviceType.TabIndex = 39;
-            this.textDeviceType.Text = "##########";
-            // 
-            // textOperatingSystem
-            // 
-            this.textOperatingSystem.BackColor = System.Drawing.Color.White;
-            this.textOperatingSystem.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textOperatingSystem.Location = new System.Drawing.Point(171, 156);
-            this.textOperatingSystem.Name = "textOperatingSystem";
-            this.textOperatingSystem.ReadOnly = true;
-            this.textOperatingSystem.Size = new System.Drawing.Size(190, 13);
-            this.textOperatingSystem.TabIndex = 40;
-            this.textOperatingSystem.Text = "##########";
-            // 
-            // textOSVersion
-            // 
-            this.textOSVersion.BackColor = System.Drawing.Color.White;
-            this.textOSVersion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textOSVersion.Location = new System.Drawing.Point(171, 178);
-            this.textOSVersion.Name = "textOSVersion";
-            this.textOSVersion.ReadOnly = true;
-            this.textOSVersion.Size = new System.Drawing.Size(190, 13);
-            this.textOSVersion.TabIndex = 41;
-            this.textOSVersion.Text = "##########";
-            // 
-            // textWindowsInstallDate
-            // 
-            this.textWindowsInstallDate.BackColor = System.Drawing.Color.White;
-            this.textWindowsInstallDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textWindowsInstallDate.Location = new System.Drawing.Point(171, 200);
-            this.textWindowsInstallDate.Name = "textWindowsInstallDate";
-            this.textWindowsInstallDate.ReadOnly = true;
-            this.textWindowsInstallDate.Size = new System.Drawing.Size(190, 13);
-            this.textWindowsInstallDate.TabIndex = 42;
-            this.textWindowsInstallDate.Text = "##########";
-            // 
-            // textArchitecture
-            // 
-            this.textArchitecture.BackColor = System.Drawing.Color.White;
-            this.textArchitecture.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textArchitecture.Location = new System.Drawing.Point(521, 46);
-            this.textArchitecture.Name = "textArchitecture";
-            this.textArchitecture.ReadOnly = true;
-            this.textArchitecture.Size = new System.Drawing.Size(190, 13);
-            this.textArchitecture.TabIndex = 43;
-            this.textArchitecture.Text = "##########";
-            // 
-            // textCPU
-            // 
-            this.textCPU.BackColor = System.Drawing.Color.White;
-            this.textCPU.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textCPU.Location = new System.Drawing.Point(521, 68);
-            this.textCPU.Name = "textCPU";
-            this.textCPU.ReadOnly = true;
-            this.textCPU.Size = new System.Drawing.Size(245, 13);
-            this.textCPU.TabIndex = 44;
-            this.textCPU.Text = "##########";
-            // 
-            // textCPUBench
-            // 
-            this.textCPUBench.BackColor = System.Drawing.Color.White;
-            this.textCPUBench.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textCPUBench.Location = new System.Drawing.Point(521, 90);
-            this.textCPUBench.Name = "textCPUBench";
-            this.textCPUBench.ReadOnly = true;
-            this.textCPUBench.Size = new System.Drawing.Size(190, 13);
-            this.textCPUBench.TabIndex = 45;
-            this.textCPUBench.Text = "##########";
-            // 
-            // textGPU
-            // 
-            this.textGPU.BackColor = System.Drawing.Color.White;
-            this.textGPU.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textGPU.Location = new System.Drawing.Point(521, 112);
-            this.textGPU.Name = "textGPU";
-            this.textGPU.ReadOnly = true;
-            this.textGPU.Size = new System.Drawing.Size(190, 13);
-            this.textGPU.TabIndex = 46;
-            this.textGPU.Text = "##########";
-            // 
-            // textGPUBench
-            // 
-            this.textGPUBench.BackColor = System.Drawing.Color.White;
-            this.textGPUBench.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textGPUBench.Location = new System.Drawing.Point(521, 134);
-            this.textGPUBench.Name = "textGPUBench";
-            this.textGPUBench.ReadOnly = true;
-            this.textGPUBench.Size = new System.Drawing.Size(190, 13);
-            this.textGPUBench.TabIndex = 47;
-            this.textGPUBench.Text = "##########";
-            // 
-            // textRAM
-            // 
-            this.textRAM.BackColor = System.Drawing.Color.White;
-            this.textRAM.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textRAM.Location = new System.Drawing.Point(521, 156);
-            this.textRAM.Name = "textRAM";
-            this.textRAM.ReadOnly = true;
-            this.textRAM.Size = new System.Drawing.Size(190, 13);
-            this.textRAM.TabIndex = 48;
-            this.textRAM.Text = "##########";
+            this.textSymVersion.BackColor = System.Drawing.Color.White;
+            this.textSymVersion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textSymVersion.Location = new System.Drawing.Point(521, 200);
+            this.textSymVersion.Name = "textSymVersion";
+            this.textSymVersion.ReadOnly = true;
+            this.textSymVersion.Size = new System.Drawing.Size(190, 13);
+            this.textSymVersion.TabIndex = 50;
+            this.textSymVersion.Text = "##########";
             // 
             // textFreeSpace
             // 
@@ -557,26 +390,171 @@
             this.textFreeSpace.TabIndex = 49;
             this.textFreeSpace.Text = "##########";
             // 
-            // textSymVersion
+            // textRAM
             // 
-            this.textSymVersion.BackColor = System.Drawing.Color.White;
-            this.textSymVersion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textSymVersion.Location = new System.Drawing.Point(521, 200);
-            this.textSymVersion.Name = "textSymVersion";
-            this.textSymVersion.ReadOnly = true;
-            this.textSymVersion.Size = new System.Drawing.Size(190, 13);
-            this.textSymVersion.TabIndex = 50;
-            this.textSymVersion.Text = "##########";
+            this.textRAM.BackColor = System.Drawing.Color.White;
+            this.textRAM.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textRAM.Location = new System.Drawing.Point(521, 156);
+            this.textRAM.Name = "textRAM";
+            this.textRAM.ReadOnly = true;
+            this.textRAM.Size = new System.Drawing.Size(190, 13);
+            this.textRAM.TabIndex = 48;
+            this.textRAM.Text = "##########";
             // 
-            // PCHeader2
+            // textGPUBench
             // 
-            this.PCHeader2.AutoSize = true;
-            this.PCHeader2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PCHeader2.Location = new System.Drawing.Point(6, 10);
-            this.PCHeader2.Name = "PCHeader2";
-            this.PCHeader2.Size = new System.Drawing.Size(60, 24);
-            this.PCHeader2.TabIndex = 1;
-            this.PCHeader2.Text = "WS##";
+            this.textGPUBench.BackColor = System.Drawing.Color.White;
+            this.textGPUBench.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textGPUBench.Location = new System.Drawing.Point(521, 134);
+            this.textGPUBench.Name = "textGPUBench";
+            this.textGPUBench.ReadOnly = true;
+            this.textGPUBench.Size = new System.Drawing.Size(190, 13);
+            this.textGPUBench.TabIndex = 47;
+            this.textGPUBench.Text = "##########";
+            // 
+            // textGPU
+            // 
+            this.textGPU.BackColor = System.Drawing.Color.White;
+            this.textGPU.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textGPU.Location = new System.Drawing.Point(521, 112);
+            this.textGPU.Name = "textGPU";
+            this.textGPU.ReadOnly = true;
+            this.textGPU.Size = new System.Drawing.Size(190, 13);
+            this.textGPU.TabIndex = 46;
+            this.textGPU.Text = "##########";
+            // 
+            // textCPUBench
+            // 
+            this.textCPUBench.BackColor = System.Drawing.Color.White;
+            this.textCPUBench.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textCPUBench.Location = new System.Drawing.Point(521, 90);
+            this.textCPUBench.Name = "textCPUBench";
+            this.textCPUBench.ReadOnly = true;
+            this.textCPUBench.Size = new System.Drawing.Size(190, 13);
+            this.textCPUBench.TabIndex = 45;
+            this.textCPUBench.Text = "##########";
+            // 
+            // textCPU
+            // 
+            this.textCPU.BackColor = System.Drawing.Color.White;
+            this.textCPU.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textCPU.Location = new System.Drawing.Point(521, 68);
+            this.textCPU.Name = "textCPU";
+            this.textCPU.ReadOnly = true;
+            this.textCPU.Size = new System.Drawing.Size(245, 13);
+            this.textCPU.TabIndex = 44;
+            this.textCPU.Text = "##########";
+            // 
+            // textArchitecture
+            // 
+            this.textArchitecture.BackColor = System.Drawing.Color.White;
+            this.textArchitecture.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textArchitecture.Location = new System.Drawing.Point(521, 46);
+            this.textArchitecture.Name = "textArchitecture";
+            this.textArchitecture.ReadOnly = true;
+            this.textArchitecture.Size = new System.Drawing.Size(190, 13);
+            this.textArchitecture.TabIndex = 43;
+            this.textArchitecture.Text = "##########";
+            // 
+            // textWindowsInstallDate
+            // 
+            this.textWindowsInstallDate.BackColor = System.Drawing.Color.White;
+            this.textWindowsInstallDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textWindowsInstallDate.Location = new System.Drawing.Point(171, 200);
+            this.textWindowsInstallDate.Name = "textWindowsInstallDate";
+            this.textWindowsInstallDate.ReadOnly = true;
+            this.textWindowsInstallDate.Size = new System.Drawing.Size(190, 13);
+            this.textWindowsInstallDate.TabIndex = 42;
+            this.textWindowsInstallDate.Text = "##########";
+            // 
+            // textOSVersion
+            // 
+            this.textOSVersion.BackColor = System.Drawing.Color.White;
+            this.textOSVersion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textOSVersion.Location = new System.Drawing.Point(171, 178);
+            this.textOSVersion.Name = "textOSVersion";
+            this.textOSVersion.ReadOnly = true;
+            this.textOSVersion.Size = new System.Drawing.Size(190, 13);
+            this.textOSVersion.TabIndex = 41;
+            this.textOSVersion.Text = "##########";
+            // 
+            // textOperatingSystem
+            // 
+            this.textOperatingSystem.BackColor = System.Drawing.Color.White;
+            this.textOperatingSystem.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textOperatingSystem.Location = new System.Drawing.Point(171, 156);
+            this.textOperatingSystem.Name = "textOperatingSystem";
+            this.textOperatingSystem.ReadOnly = true;
+            this.textOperatingSystem.Size = new System.Drawing.Size(190, 13);
+            this.textOperatingSystem.TabIndex = 40;
+            this.textOperatingSystem.Text = "##########";
+            // 
+            // textDeviceType
+            // 
+            this.textDeviceType.BackColor = System.Drawing.Color.White;
+            this.textDeviceType.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textDeviceType.Location = new System.Drawing.Point(171, 134);
+            this.textDeviceType.Name = "textDeviceType";
+            this.textDeviceType.ReadOnly = true;
+            this.textDeviceType.Size = new System.Drawing.Size(190, 13);
+            this.textDeviceType.TabIndex = 39;
+            this.textDeviceType.Text = "##########";
+            // 
+            // textModel
+            // 
+            this.textModel.BackColor = System.Drawing.Color.White;
+            this.textModel.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textModel.Location = new System.Drawing.Point(171, 112);
+            this.textModel.Name = "textModel";
+            this.textModel.ReadOnly = true;
+            this.textModel.Size = new System.Drawing.Size(190, 13);
+            this.textModel.TabIndex = 38;
+            this.textModel.Text = "##########";
+            // 
+            // textManufacturer
+            // 
+            this.textManufacturer.BackColor = System.Drawing.Color.White;
+            this.textManufacturer.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textManufacturer.Location = new System.Drawing.Point(171, 90);
+            this.textManufacturer.Name = "textManufacturer";
+            this.textManufacturer.ReadOnly = true;
+            this.textManufacturer.Size = new System.Drawing.Size(190, 13);
+            this.textManufacturer.TabIndex = 37;
+            this.textManufacturer.Text = "##########";
+            // 
+            // textUser
+            // 
+            this.textUser.BackColor = System.Drawing.Color.White;
+            this.textUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textUser.Location = new System.Drawing.Point(171, 68);
+            this.textUser.Name = "textUser";
+            this.textUser.ReadOnly = true;
+            this.textUser.Size = new System.Drawing.Size(190, 13);
+            this.textUser.TabIndex = 36;
+            this.textUser.Text = "##########";
+            // 
+            // textDate
+            // 
+            this.textDate.BackColor = System.Drawing.Color.White;
+            this.textDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textDate.Location = new System.Drawing.Point(171, 46);
+            this.textDate.Name = "textDate";
+            this.textDate.ReadOnly = true;
+            this.textDate.Size = new System.Drawing.Size(190, 13);
+            this.textDate.TabIndex = 35;
+            this.textDate.Text = "##########";
+            // 
+            // OfficeProgramsTab
+            // 
+            this.OfficeProgramsTab.Controls.Add(this.OfficeLicenseListView);
+            this.OfficeProgramsTab.Controls.Add(this.PCHeader2);
+            this.OfficeProgramsTab.Location = new System.Drawing.Point(4, 22);
+            this.OfficeProgramsTab.Name = "OfficeProgramsTab";
+            this.OfficeProgramsTab.Padding = new System.Windows.Forms.Padding(3);
+            this.OfficeProgramsTab.Size = new System.Drawing.Size(769, 467);
+            this.OfficeProgramsTab.TabIndex = 1;
+            this.OfficeProgramsTab.Text = "Office licenses";
+            this.OfficeProgramsTab.UseVisualStyleBackColor = true;
             // 
             // OfficeLicenseListView
             // 
@@ -592,6 +570,7 @@
             this.officeNumber,
             this.OfficeEmail});
             this.OfficeLicenseListView.Cursor = System.Windows.Forms.Cursors.Default;
+            this.OfficeLicenseListView.FullRowSelect = true;
             this.OfficeLicenseListView.Location = new System.Drawing.Point(4, 43);
             this.OfficeLicenseListView.Name = "OfficeLicenseListView";
             this.OfficeLicenseListView.RowHeight = 20;
@@ -626,15 +605,27 @@
             this.OfficeEmail.Text = "Email";
             this.OfficeEmail.Width = 210;
             // 
-            // PCHeader3
+            // PCHeader2
             // 
-            this.PCHeader3.AutoSize = true;
-            this.PCHeader3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PCHeader3.Location = new System.Drawing.Point(6, 10);
-            this.PCHeader3.Name = "PCHeader3";
-            this.PCHeader3.Size = new System.Drawing.Size(60, 24);
-            this.PCHeader3.TabIndex = 2;
-            this.PCHeader3.Text = "WS##";
+            this.PCHeader2.AutoSize = true;
+            this.PCHeader2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PCHeader2.Location = new System.Drawing.Point(6, 10);
+            this.PCHeader2.Name = "PCHeader2";
+            this.PCHeader2.Size = new System.Drawing.Size(60, 24);
+            this.PCHeader2.TabIndex = 1;
+            this.PCHeader2.Text = "WS##";
+            // 
+            // InstalledProgramsTab
+            // 
+            this.InstalledProgramsTab.Controls.Add(this.InstalledProgramsObjectListView);
+            this.InstalledProgramsTab.Controls.Add(this.PCHeader3);
+            this.InstalledProgramsTab.Location = new System.Drawing.Point(4, 22);
+            this.InstalledProgramsTab.Name = "InstalledProgramsTab";
+            this.InstalledProgramsTab.Padding = new System.Windows.Forms.Padding(3);
+            this.InstalledProgramsTab.Size = new System.Drawing.Size(769, 467);
+            this.InstalledProgramsTab.TabIndex = 2;
+            this.InstalledProgramsTab.Text = "Installed Programs";
+            this.InstalledProgramsTab.UseVisualStyleBackColor = true;
             // 
             // InstalledProgramsObjectListView
             // 
@@ -646,6 +637,7 @@
             this.ProgramName,
             this.ProgramVersion});
             this.InstalledProgramsObjectListView.Cursor = System.Windows.Forms.Cursors.Default;
+            this.InstalledProgramsObjectListView.FullRowSelect = true;
             this.InstalledProgramsObjectListView.Location = new System.Drawing.Point(4, 43);
             this.InstalledProgramsObjectListView.Name = "InstalledProgramsObjectListView";
             this.InstalledProgramsObjectListView.RowHeight = 20;
@@ -668,6 +660,16 @@
             this.ProgramVersion.Text = "Version";
             this.ProgramVersion.Width = 150;
             // 
+            // PCHeader3
+            // 
+            this.PCHeader3.AutoSize = true;
+            this.PCHeader3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PCHeader3.Location = new System.Drawing.Point(6, 10);
+            this.PCHeader3.Name = "PCHeader3";
+            this.PCHeader3.Size = new System.Drawing.Size(60, 24);
+            this.PCHeader3.TabIndex = 2;
+            this.PCHeader3.Text = "WS##";
+            // 
             // computerBindingSource
             // 
             this.computerBindingSource.DataSource = typeof(WindowsFormsApp2.Computer);
@@ -686,9 +688,9 @@
             this.HardwareSpecsTab.PerformLayout();
             this.OfficeProgramsTab.ResumeLayout(false);
             this.OfficeProgramsTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.OfficeLicenseListView)).EndInit();
             this.InstalledProgramsTab.ResumeLayout(false);
             this.InstalledProgramsTab.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.OfficeLicenseListView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InstalledProgramsObjectListView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.computerBindingSource)).EndInit();
             this.ResumeLayout(false);

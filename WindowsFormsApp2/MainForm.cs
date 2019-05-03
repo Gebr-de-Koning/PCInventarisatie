@@ -31,14 +31,13 @@ namespace WindowsFormsApp2 {
                 if (files.Length != computers.Count) {
                     MessageBox.Show("Fout bij het inlezen van de computers");
                 }
+
                 fastObjectListView1.AddObjects(com);
+
             } catch (DirectoryNotFoundException){
                 MessageBox.Show("Geen computers gevonden");
             }
 
-            //foreach (ColumnHeader header in fastObjectListView1.Columns) {
-            //    header.Width = -2;
-            //}
         }
 
         private void processFile(String fileName) {
