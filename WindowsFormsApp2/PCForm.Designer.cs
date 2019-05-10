@@ -681,6 +681,8 @@
             this.ClientSize = new System.Drawing.Size(776, 491);
             this.Controls.Add(this.OfficeLicenseTab);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "PCForm";
             ((System.ComponentModel.ISupportInitialize)(this.DiskObjectListView)).EndInit();
             this.OfficeLicenseTab.ResumeLayout(false);

@@ -32,7 +32,8 @@ namespace WindowsFormsApp2 {
                     MessageBox.Show("Fout bij het inlezen van de computers");
                 }
 
-                fastObjectListView1.AddObjects(com);
+                computers = com;
+                fastObjectListView1.AddObjects(computers);
 
             } catch (DirectoryNotFoundException){
                 MessageBox.Show("Geen computers gevonden");
@@ -61,6 +62,24 @@ namespace WindowsFormsApp2 {
             Console.WriteLine(selectedPC.workstation);
             PCForm detailView = new PCForm(selectedPC);
             detailView.Show();
+        }
+
+        private void searchBox_TextChanged(object sender, EventArgs e){
+            if(searchBox.TextLength > 2) { 
+                fastObjectListView1.ClearObjects();
+                if (searchBox.Text == ""){
+                    fastObjectListView1.AddObjects(computers);
+                }else{
+                    foreach (Computer c in computers){
+                        if (c.MyContains(c, searchBox.Text)){
+                            fastObjectListView1.AddObject(c);
+                        }
+                    }
+                }
+            }else{
+                fastObjectListView1.ClearObjects();
+                fastObjectListView1.AddObjects(computers);
+            }
         }
     }
 }

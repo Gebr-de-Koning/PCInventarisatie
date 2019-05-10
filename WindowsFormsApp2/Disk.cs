@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace WindowsFormsApp2 {
-    public class Disk {
+    public class Disk : Searchable{
         public String name { get; set; }
         public String type { get; set; }
         public String health { get; set; }

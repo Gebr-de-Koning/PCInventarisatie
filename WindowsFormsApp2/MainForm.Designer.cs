@@ -43,9 +43,12 @@
             this.GPUscore = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.symantecVersion = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.searchBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.computerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.fastObjectListView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.computerBindingSource)).BeginInit();
@@ -93,7 +96,7 @@
             this.fastObjectListView1.Location = new System.Drawing.Point(0, 0);
             this.fastObjectListView1.Name = "fastObjectListView1";
             this.fastObjectListView1.ShowGroups = false;
-            this.fastObjectListView1.Size = new System.Drawing.Size(1438, 339);
+            this.fastObjectListView1.Size = new System.Drawing.Size(1438, 360);
             this.fastObjectListView1.TabIndex = 3;
             this.fastObjectListView1.UseCompatibleStateImageBehavior = false;
             this.fastObjectListView1.View = System.Windows.Forms.View.Details;
@@ -205,13 +208,35 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.splitContainer1.Panel1.Controls.Add(this.label1);
+            this.splitContainer1.Panel1.Controls.Add(this.searchBox);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.fastObjectListView1);
-            this.splitContainer1.Size = new System.Drawing.Size(1438, 450);
-            this.splitContainer1.SplitterDistance = 107;
+            this.splitContainer1.Size = new System.Drawing.Size(1438, 476);
+            this.splitContainer1.SplitterDistance = 112;
             this.splitContainer1.TabIndex = 4;
+            // 
+            // searchBox
+            // 
+            this.searchBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.searchBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchBox.Location = new System.Drawing.Point(1213, 78);
+            this.searchBox.Name = "searchBox";
+            this.searchBox.Size = new System.Drawing.Size(213, 23);
+            this.searchBox.TabIndex = 0;
+            this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(1210, 62);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Zoeken:";
             // 
             // computerBindingSource
             // 
@@ -221,13 +246,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1438, 450);
+            this.ClientSize = new System.Drawing.Size(1438, 476);
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PCInventarisation";
             this.Text = "PC Inventarisatie";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.fastObjectListView1)).EndInit();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
@@ -256,6 +283,8 @@
         private BrightIdeasSoftware.OLVColumn deviceType;
         private BrightIdeasSoftware.OLVColumn symantecVersion;
         private BrightIdeasSoftware.OLVColumn date;
+        private System.Windows.Forms.TextBox searchBox;
+        private System.Windows.Forms.Label label1;
     }
 }
 

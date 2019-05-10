@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace WindowsFormsApp2{
-    public class InstalledProgram{
+    public class InstalledProgram : Searchable{
         public String name { get; set; }
         public String version { get; set; }
 

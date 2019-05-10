@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace WindowsFormsApp2{
-    public class GPU{
+    public class GPU : Searchable{
         public String name { get; set; }
         public int score { get; set; }
 

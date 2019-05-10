@@ -5,13 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace WindowsFormsApp2 {
-    public class CPU {
+    public class CPU : Searchable {
         public String name { get; set; }
         public int score { get; set; }
 
         public CPU(String name) {
             this.name = name;
-            this.score = Benchmark.getCpuScore(name);
+            score = Benchmark.getCpuScore(name);
         }
     }
 }
