@@ -8,8 +8,7 @@ namespace WindowsFormsApp2 {
     public partial class PCInventarisation : Form {
         private List<Computer> computers = new List<Computer>();
 
-        public PCInventarisation()
-        {
+        public PCInventarisation(){
             InitializeComponent();
         }
 
@@ -33,7 +32,7 @@ namespace WindowsFormsApp2 {
                 }
 
                 computers = com;
-                fastObjectListView1.AddObjects(computers);
+                TotalPClist.AddObjects(computers);
 
             } catch (DirectoryNotFoundException){
                 MessageBox.Show("Geen computers gevonden");
@@ -58,7 +57,7 @@ namespace WindowsFormsApp2 {
         }
 
         private void Form1_ItemActivate(Object sender, EventArgs e) {
-            Computer selectedPC = (Computer) fastObjectListView1.SelectedObject;
+            Computer selectedPC = (Computer) TotalPClist.SelectedObject;
             Console.WriteLine(selectedPC.workstation);
             PCForm detailView = new PCForm(selectedPC);
             detailView.Show();
@@ -66,19 +65,15 @@ namespace WindowsFormsApp2 {
 
         private void searchBox_TextChanged(object sender, EventArgs e){
             if(searchBox.TextLength > 2) { 
-                fastObjectListView1.ClearObjects();
-                if (searchBox.Text == ""){
-                    fastObjectListView1.AddObjects(computers);
-                }else{
-                    foreach (Computer c in computers){
-                        if (c.MyContains(c, searchBox.Text)){
-                            fastObjectListView1.AddObject(c);
-                        }
+                TotalPClist.ClearObjects();
+                foreach (Computer c in computers){
+                    if (c.MyContains(c, searchBox.Text)){
+                        TotalPClist.AddObject(c);
                     }
                 }
             }else{
-                fastObjectListView1.ClearObjects();
-                fastObjectListView1.AddObjects(computers);
+                TotalPClist.ClearObjects();
+                TotalPClist.AddObjects(computers);
             }
         }
     }
