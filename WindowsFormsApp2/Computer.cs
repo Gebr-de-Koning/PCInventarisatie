@@ -30,13 +30,13 @@ namespace WindowsFormsApp2{
             programs = new List<InstalledProgram>();
         }
 
-        public override Boolean MyContains(object instance, String word){
-            Boolean result = base.MyContains(instance, word);
-            if (!result) { result = cpu.MyContains(cpu, word); }
-            if (!result) { result = gpu.MyContains(gpu, word); }
-            if (!result) { foreach (Disk d in disks) { if(!result) result = d.MyContains(d, word); } }
-            if (!result) { foreach (OfficeLicense o in officeLicences) { if (!result) result = o.MyContains(o, word); } }
-            if (!result) { foreach (InstalledProgram p in programs) { if (!result) result = p.MyContains(p, word); } }
+        public override Boolean search(object instance, String word){
+            Boolean result = base.search(instance, word);
+            if (!result) { result = cpu.search(cpu, word); }
+            if (!result) { result = gpu.search(gpu, word); }
+            if (!result) { foreach (Disk d in disks) { if(!result) result = d.search(d, word); } }
+            if (!result) { foreach (OfficeLicense o in officeLicences) { if (!result) result = o.search(o, word); } }
+            if (!result) { foreach (InstalledProgram p in programs) { if (!result) result = p.search(p, word); } }
             return result;
         }
     }

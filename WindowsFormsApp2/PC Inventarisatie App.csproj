@@ -41,6 +41,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -110,6 +111,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="computer_2_cy0_icon.ico" />
+    <None Include="Resources\Vector_search_icon.svg.png" />
     <None Include="Resources\GDKlogo_20160616_klein.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace WindowsFormsApp2{
     public class Searchable{
-        public virtual Boolean MyContains(object instance, String word){
+        public virtual Boolean search(object instance, String word){
             return instance.GetType()
                    .GetProperties()
                    .Where(x => x.PropertyType == typeof(String))

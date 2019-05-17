@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -67,7 +68,7 @@ namespace WindowsFormsApp2 {
             if(searchBox.TextLength > 2) { 
                 TotalPClist.ClearObjects();
                 foreach (Computer c in computers){
-                    if (c.MyContains(c, searchBox.Text)){
+                    if (c.search(c, searchBox.Text)){
                         TotalPClist.AddObject(c);
                     }
                 }

@@ -43,7 +43,7 @@
             this.GPUscore = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.symantecVersion = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.label1 = new System.Windows.Forms.Label();
+            this.searchIcon = new System.Windows.Forms.PictureBox();
             this.searchBox = new System.Windows.Forms.TextBox();
             this.computerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.TotalPClist)).BeginInit();
@@ -51,6 +51,7 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.searchIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.computerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,7 +97,7 @@
             this.TotalPClist.Location = new System.Drawing.Point(0, 0);
             this.TotalPClist.Name = "TotalPClist";
             this.TotalPClist.ShowGroups = false;
-            this.TotalPClist.Size = new System.Drawing.Size(1438, 404);
+            this.TotalPClist.Size = new System.Drawing.Size(1451, 446);
             this.TotalPClist.TabIndex = 3;
             this.TotalPClist.UseCompatibleStateImageBehavior = false;
             this.TotalPClist.View = System.Windows.Forms.View.Details;
@@ -208,34 +209,34 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.splitContainer1.Panel1.Controls.Add(this.label1);
+            this.splitContainer1.Panel1.Controls.Add(this.searchIcon);
             this.splitContainer1.Panel1.Controls.Add(this.searchBox);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.TotalPClist);
-            this.splitContainer1.Size = new System.Drawing.Size(1438, 533);
-            this.splitContainer1.SplitterDistance = 125;
+            this.splitContainer1.Size = new System.Drawing.Size(1451, 529);
+            this.splitContainer1.SplitterDistance = 79;
             this.splitContainer1.TabIndex = 4;
             // 
-            // label1
+            // searchIcon
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1145, 68);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Zoeken:";
+            this.searchIcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.searchIcon.Image = global::PC_inventarisatie_gdk.Properties.Resources.Vector_search_icon_svg;
+            this.searchIcon.Location = new System.Drawing.Point(1214, 53);
+            this.searchIcon.Name = "searchIcon";
+            this.searchIcon.Size = new System.Drawing.Size(24, 23);
+            this.searchIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.searchIcon.TabIndex = 2;
+            this.searchIcon.TabStop = false;
             // 
             // searchBox
             // 
             this.searchBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchBox.Location = new System.Drawing.Point(1149, 91);
+            this.searchBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchBox.Location = new System.Drawing.Point(1244, 52);
             this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(277, 23);
+            this.searchBox.Size = new System.Drawing.Size(195, 24);
             this.searchBox.TabIndex = 0;
             this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
             // 
@@ -247,10 +248,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1438, 533);
+            this.ClientSize = new System.Drawing.Size(1451, 529);
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
             this.Name = "PCInventarisation";
             this.Text = "PC Inventarisatie";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -260,6 +260,7 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.searchIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.computerBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -286,7 +287,7 @@
         private BrightIdeasSoftware.OLVColumn symantecVersion;
         private BrightIdeasSoftware.OLVColumn date;
         private System.Windows.Forms.TextBox searchBox;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox searchIcon;
     }
 }
 
